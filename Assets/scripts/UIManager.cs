@@ -189,7 +189,7 @@ public class UIManager : MonoBehaviour
         gameResultPanel.SetActive(true);
         betPanel.SetActive(true);
         cashOutPanel.SetActive(false);
-        resultText.text = "You Earned "+res.totalProfitAmount.ToString("F2") +"!";
+        resultText.text = "You Earned " + AmountField.text + " + " + (res.totalProfitAmount - float.Parse(AmountField.text)).ToString("F2") +"!";
         BenefitField.text = res.totalProfitAmount.ToString("F2");
         BenefitText.text = res.totalProfitCross.ToString("F2")+"X";
         SetImage(res.randomArray);
