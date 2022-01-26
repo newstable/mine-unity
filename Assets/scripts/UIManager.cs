@@ -222,8 +222,8 @@ public class UIManager : MonoBehaviour
     public void CrossBtn_Clicked()
     {
         float amount = float.Parse(AmountField.text);
-        if (amount >= 1000000f)
-            AmountField.text = "1000000.0";
+        if (amount >= 100000f)
+            AmountField.text = "100000.0";
         else
             AmountField.text = (amount * 2.0f).ToString("F2");
     }
@@ -240,9 +240,9 @@ public class UIManager : MonoBehaviour
     public void MaxBtn_Clicked()
     {
         float myTotalAmount = float.Parse(string.IsNullOrEmpty(walletAmount_Text.text) ? "0" : walletAmount_Text.text);
-        if (myTotalAmount >= 1000000f)
-            AmountField.text = "1000000.0";
-        else if (myTotalAmount >= 10f && myTotalAmount < 1000000f)
+        if (myTotalAmount >= 100000f)
+            AmountField.text = "100000.0";
+        else if (myTotalAmount >= 10f && myTotalAmount < 100000f)
             AmountField.text = myTotalAmount.ToString("F2");
     }
 
@@ -250,9 +250,9 @@ public class UIManager : MonoBehaviour
     {
         if (float.Parse(AmountField.text) <= 10f)
             AmountField.text = "10.0";
-        else if (float.Parse(AmountField.text) >= 1000000f)
+        else if (float.Parse(AmountField.text) >= 100000f)
         {
-            AmountField.text = "1000000.0";
+            AmountField.text = "100000.0";
         }        
     }
 
